@@ -17,7 +17,7 @@ jupyter notebook
 
 ## Tips
 - 1d arrays問題
-  - scikit-learn 0.18から「1サンプル」時のデータをreshapeする必要が出てきた。
+  - scikit-learn 0.17から「1サンプル」時のデータをreshapeする必要が出てきた。
   - 例えば ``svm.predict(data[-1])`` のように、データセットの最後の1サンプルに対して予測したい場合、 ``svm.predict(data[-1:]`` のように記述するか、numpy.reshapeする必要がある。
   - Warning文
     - DeprecationWarning: Passing 1d arrays as data is deprecated in 0.17 and will raise ValueError in 0.19. Reshape your data either using X.reshape(-1, 1) if your data has a single feature or X.reshape(1, -1) if it contains a single sample.
